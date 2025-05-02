@@ -1,0 +1,12 @@
+# src/deployment/k8s/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: multimodal-ai-system
+spec:
+  selector:
+    app: multimodal-ai-system
+  ports:
+  - port: 80
+    targetPort: 8000
+  type: LoadBalancer
